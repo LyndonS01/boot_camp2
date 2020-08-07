@@ -21,7 +21,7 @@ jobs:
       - run: |    # multiline value
           dotnet sonarscanner begin -o:'LyndonS01' -k:'LyndonS01_boot_camp2' -d:sonar.login='d8b8c473c8861f10a785b70c68518d4d4070c602' -d:sonar.host.url='https://sonarcloud.io/'
           dotnet build
-          dotnet test -p:CollectCoverage=true
+          dotnet test -p:CollectCoverage=true -p:CoverLetOutputFormat=opencover
           dotnet sonarscanner end -d:sonar.login='d8b8c473c8861f10a785b70c68518d4d4070c602'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
