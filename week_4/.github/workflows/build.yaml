@@ -2,7 +2,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.1
+      - uses: actions/checkout@v2.3.2
       - run: dotnet build
   
   test:
@@ -16,7 +16,7 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.1
+      - uses: actions/checkout@v2.3.2
       - run: dotnet tool install --global dotnet-sonarscanner
       - run: |
           dotnet sonarscanner begin -o:'LyndonS01' -k:'LyndonS01_boot_camp2' -d:sonar.login='d8b8c473c8861f10a785b70c68518d4d4070c602' -d:sonar.host.url='https://sonarcloud.io/'
