@@ -2,31 +2,44 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.2
-      - run: dotnet build
+      - uses: actions/checkout@v2.3.1
+      - run: dotnet build # compile
   
   test:
-    # needs: build
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.2
-      - run: dotnet test -p:CollectCoverage=true
+      - uses: actions/checkout@v2.3.1
+      - run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover # unit testing
 
   analyze:
     needs: [build, test]
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.2
+      - uses: actions/checkout@v2.3.1
       - run: git fetch --unshallow
       - run: dotnet tool install --global dotnet-sonarscanner
-      - run: |    # multiline value
-          dotnet sonarscanner begin -o:'lyndons01' -k:'boot_camp2' -d:sonar.login='5e1313208a6cd4ef02d3f52ea5f8514946ef1e37' -d:sonar.host.url='https://sonarcloud.io/'
+      - run: | # multiline value with each line ending with a newline character \n
+          dotnet sonarscanner begin -o:'200713-dotnet' -k:'200713-dotnet_training-code-week4' -d:sonar.login='3fa8402a38e8ea4d47b0aa02b95ac86aa4e16cca' -d:sonar.host.url='https://sonarcloud.io/'
           dotnet build
-          dotnet test -p:CollectCoverage=true -p:CoverLetOutputFormat=opencover --logger trx
-          dotnet sonarscanner end -d:sonar.login='5e1313208a6cd4ef02d3f52ea5f8514946ef1e37'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
-  # package:
+          dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
+          dotnet sonarscanner end -d:sonar.login='3fa8402a38e8ea4d47b0aa02b95ac86aa4e16cca'
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  package:
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: [analyze]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.1
+      - run: docker login --username ${DOCKER_LOGIN} --password ${DOCKER_TOKEN}
+      - run: docker image build -f dockerfile -t devopsci .
+      - run: docker image tag devopsci fredbelotte/devopsci
+      - run: docker image push fredbelotte/devopsci
+      - run: docker logout
+
   # deploy:
 
 name: cibuild

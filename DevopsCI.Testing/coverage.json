@@ -1,6 +1,6 @@
 {
   "DevopsCI.Client.dll": {
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Program.cs": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Program.cs": {
       "DevopsCI.Client.Program": {
         "System.Void DevopsCI.Client.Program::Main(System.String[])": {
           "Lines": {
@@ -22,7 +22,7 @@
         }
       }
     },
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Startup.cs": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Startup.cs": {
       "DevopsCI.Client.Startup": {
         "Microsoft.Extensions.Configuration.IConfiguration DevopsCI.Client.Startup::get_Configuration()": {
           "Lines": {
@@ -91,7 +91,7 @@
         }
       }
     },
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Models/ErrorViewModel.cs": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Models/ErrorViewModel.cs": {
       "DevopsCI.Client.Models.ErrorViewModel": {
         "System.String DevopsCI.Client.Models.ErrorViewModel::get_RequestId()": {
           "Lines": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Controllers/HomeController.cs": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Controllers/HomeController.cs": {
       "DevopsCI.Client.Controllers.HomeController": {
         "Microsoft.AspNetCore.Mvc.IActionResult DevopsCI.Client.Controllers.HomeController::Index()": {
           "Lines": {
@@ -187,7 +187,7 @@
     }
   },
   "DevopsCI.Client.Views.dll": {
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Views/Home/Index.cshtml": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Views/Home/Index.cshtml": {
       "AspNetCore.Views_Home_Index/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
@@ -197,7 +197,7 @@
         }
       }
     },
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Views/Home/Privacy.cshtml": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Views/Home/Privacy.cshtml": {
       "AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
@@ -208,7 +208,7 @@
         }
       }
     },
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Views/Shared/Error.cshtml": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Views/Shared/Error.cshtml": {
       "AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
@@ -239,7 +239,7 @@
         }
       }
     },
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Views/Shared/_Layout.cshtml": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Views/Shared/_Layout.cshtml": {
       "AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__23_0>d": {
         "System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__23_0>d::MoveNext()": {
           "Lines": {
@@ -405,7 +405,7 @@
         }
       }
     },
-    "/home/lyndons/2007_13_dotnet/boot_camp2/week_4/DevopsCI.Client/Views/_ViewStart.cshtml": {
+    "/home/fred/2007_13_dotnet/week_4/DevopsCI.Client/Views/_ViewStart.cshtml": {
       "AspNetCore.Views__ViewStart/<ExecuteAsync>d__0": {
         "System.Void AspNetCore.Views__ViewStart/<ExecuteAsync>d__0::MoveNext()": {
           "Lines": {
